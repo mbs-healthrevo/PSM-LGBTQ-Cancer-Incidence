@@ -1,0 +1,28 @@
+---
+title: "LGBTQ vs Cis-Het Cancer Incidence in All of Us — PSM Analysis"
+format: html
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Overview
+This report renders the primary and secondary analyses defined in the 10.22.2025 SAP.
+
+## Primary Results
+```{r}
+irr <- readr::read_csv('outputs/tables/primary_irr.csv', show_col_types = FALSE)
+knitr::kable(irr, caption = 'Primary IRR (LGBTQ vs Cis-Het)')
+```
+
+## Secondary (Cox)
+```{r}
+hr <- readr::read_csv('outputs/tables/secondary_hr.csv', show_col_types = FALSE)
+knitr::kable(hr, caption = 'Secondary HR (time-to-first cancer)')
+```
+
+## Figures
+![](../outputs/figures/crude_incidence.png)
+
+![](../outputs/figures/love_plot.png)
