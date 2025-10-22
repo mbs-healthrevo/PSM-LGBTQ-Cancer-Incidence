@@ -12,7 +12,7 @@ and emits tables/figures suitable for journals.
    ```r
    source('R/00_setup_packages.R')
    ```
-3) Configure your dataset IDs and project in `R/01_config.R` (CDR, dataset, project).
+3) Configure dataset IDs and project in `R/01_config.R` (CDR, dataset, project).
 4) Build concept sets and extract cohorts:
    ```r
    source('R/10_build_concepts.R')
